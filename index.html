@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой ритм — расписание</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="shell">
+<header>
+  <div><div class="eyebrow">Личный план развития</div><h1>Мой ритм</h1><p class="subtitle">Расписание, которое помогает двигаться к Middle без постоянной перегрузки. Отмечай выполненные пункты — дневной и месячный результат посчитается автоматически.</p></div>
+  <div class="header-note"><strong>Главный фокус сейчас</strong><br>Android Skills Tree: Junior → Middle. После освоения базы — курс Modern Android Developer.</div>
+</header>
+<div class="layout">
+<main class="card">
+  <div class="weekbar">
+    <div><h2>Недельное расписание</h2><div class="week-label" id="weekLabel"></div></div>
+    <div class="week-controls"><button class="iconbtn" id="prevWeek" aria-label="Предыдущая неделя">‹</button><button class="iconbtn" id="nextWeek" aria-label="Следующая неделя">›</button></div>
+  </div>
+  <div class="week-content" id="weekContent"></div>
+</main>
+<aside class="side">
+  <section class="card card-pad">
+    <div class="section-title"><h2>Дополнительное направление</h2><span class="small">по неделям</span></div>
+    <div class="toggle-row"><div class="toggle-copy"><strong id="extraTitle">AI Engineering</strong><span id="extraDesc">Изучение AI и LLM</span></div><button id="switchExtra" class="iconbtn" aria-label="Переключить дополнительное направление">↻</button></div>
+    <div class="small" id="extraHelp">Переключай между AI Engineering и KMP Installer для выбранной недели. Выбор сохраняется отдельно для каждой недели.</div>
+  </section>
+  <section class="card card-pad">
+    <div class="section-title"><h2>Сводка за месяц</h2><span class="small">по отмеченным дням</span></div>
+    <div class="month-head"><button id="prevMonth" aria-label="Предыдущий месяц">‹</button><div class="month-name" id="monthName"></div><button id="nextMonth" aria-label="Следующий месяц">›</button></div>
+    <div class="calendar" id="calendar"></div>
+    <div class="stats" style="margin-top:16px">
+      <div class="stat"><div class="value" id="avgPct">—</div><div class="label">Среднее выполнение</div></div>
+      <div class="stat"><div class="value" id="trackedDays">0</div><div class="label">Дней с отметками</div></div>
+      <div class="stat"><div class="value" id="completedCount">0</div><div class="label">Выполнено пунктов</div></div>
+      <div class="stat"><div class="value" id="bestDay">—</div><div class="label">Лучший день</div></div>
+    </div>
+    <div class="rating" id="rating">Отмечай пункты расписания, чтобы увидеть оценку регулярности.</div>
+    <div class="legend">День учитывается в статистике, если ты отметил хотя бы один пункт. Процент дня — выполненные пункты от общего количества запланированных пунктов.</div>
+  </section>
+  <section class="card card-pad">
+    <div class="section-title"><h2>Принципы расписания</h2></div>
+    <div class="small">Пн и Чт — спортзал. Пт — необязательный учебный блок на 60 минут. Суббота после проектной сессии и воскресный день оставлены преимущественно свободными. Пропущенные занятия не нужно переносить.</div>
+  </section>
+</aside>
+</div>
+<p class="footer">Данные хранятся локально в этом браузере. Для сохранения статистики открывай страницу в том же браузере и не очищай его данные сайта. Проценты отражают выполнение пунктов расписания, а не оценку твоей продуктивности.</p>
+</div>
+<script src="js/schedule.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

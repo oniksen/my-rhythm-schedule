@@ -1,0 +1,12 @@
+const assert = require("node:assert/strict");
+const fs = require("node:fs");
+const path = require("node:path");
+const readme = fs.readFileSync(path.join(__dirname, "..", "README.md"), "utf8");
+assert.match(readme, /index\.html/);
+assert.match(readme, /js\/schedule\.js/);
+assert.match(readme, /Vercel/);
+assert.match(readme, /GitHub Pages/);
+assert.match(readme, /\.nojekyll/);
+assert.match(readme, /id/);
+assert.doesNotMatch(readme, /npm install/);
+assert.doesNotMatch(readme, /npm run build/);
